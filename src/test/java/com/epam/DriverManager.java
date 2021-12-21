@@ -6,11 +6,9 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 public class DriverManager {
 
-    public static WebDriver driver = null;
+    public static WebDriver driver = new ChromeDriver();
 
     public static void init() {
-        System.setProperty("webdriver.chrome.driver"
-                , System.getProperty("user.dir") + "\\src\\main\\resources\\chromedriver.exe");
         // changing language in Chrome to Russian
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--lang=ru");
